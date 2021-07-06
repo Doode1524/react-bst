@@ -1,29 +1,23 @@
-import React from 'react'
-import Tree from 'react-tree-graph';
+import React from "react";
+import {makeStyles} from '@material-ui/core/styles'
+// import Tree from "react-d3-tree";
 
-const TreeComponent = () => {
+const useStyles = makeStyles({
+  node: {
+    borderBottom: "5px solid black",
+    margin: 0,
+    padding: 0,
+    width: "5em",
+  }
+})
 
-    const data = {
-        name: 'Parent',
-        children: [{
-            name: 'Child One'
-        }, 
-        {
-            name: 'Child Two'
-        }]
-    };
+const TreeComponent = (props) => {
+  const classes = useStyles(props)
+  return (
+    <div style={{padding: "0px", margin: "0px", textAlign: "center", display: "flex"}}>
+      <h1 className={classes.node}>21</h1>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <Tree
-	        data={data}
-	height={200}
-	width={200}
-	svgProps={{
-		transform: 'rotate(90)'
-	}}/>
-        </div>
-    )
-}
-
-export default TreeComponent
+export default TreeComponent;

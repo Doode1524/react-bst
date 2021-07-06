@@ -1,9 +1,10 @@
 import './App.css';
+import TreeComponent from './components/TreeComponent'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <TreeComponent />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 const BSTContainer = () => {
+
   class Node {
     constructor(value) {
       this.value = value;
@@ -69,10 +70,11 @@ const BSTContainer = () => {
   tree.insert(12);
   tree.insert(16);
 
-  console.log(tree.BFS(20));
   console.log(tree);
 
-  return <div></div>;
+  return <div>
+      <h1>Tree Container</h1>
+  </div>;
 };
 
 export default BSTContainer;
